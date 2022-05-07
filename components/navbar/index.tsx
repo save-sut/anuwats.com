@@ -19,10 +19,10 @@ export default function Navbar() {
           <Link href="/">
             <a>
               <h1 className="font-semibold text-xl dark:text-gray-100">
-                {process.env.NEXT_PUBLIC_NAME}
+                Anwuat S.
               </h1>
               <p className="text-base font-light text-gray-500 dark:text-gray-300">
-                {process.env.NEXT_PUBLIC_DESIGNATION}
+                Full-stack Developer
               </p>
             </a>
           </Link>
@@ -58,7 +58,7 @@ export default function Navbar() {
           <Link href="/blog">
             <a
               className={`text-base  ${
-                router.asPath === "/projects"
+                router.asPath === "/blog"
                   ? "text-gray-800 font-bold dark:text-gray-200"
                   : "text-gray-600 dark:text-gray-300 font-normal "
               }`}
@@ -136,7 +136,7 @@ export default function Navbar() {
             Home
           </a>
         </Link>
-        <Link href="/blogs">
+        <Link href="/blog">
           <a className={`text-base font-${router.asPath === "/blog" ? "bold" : "normal"} text-gray-600 dark:text-gray-300`}>
             Blog
           </a>
