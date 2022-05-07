@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,600;1,700&display=swap');
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  font-family: 'Titillium Web';
+  font-size: 18px;
+}
+
+.dash {
+  color: #ff851b;
+  animation: flickerAnimation 1s infinite;
+}
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+ }
+  50% {
+    opacity: 0;
+ }
+  100% {
+    opacity: 1;
+ }
+}
+
+.image-cropper {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
