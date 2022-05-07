@@ -6,7 +6,7 @@ import Container from '../../components/container'
 const Blogs: NextPage = () => {
   return (
     <main className="dark:bg-gray-800 w-full">
-      <Container metaTitle='Page not found'>
+      <Container metaTitle='Blog'>
         <BlogPage />
       </Container>
     </main>

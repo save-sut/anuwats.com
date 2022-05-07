@@ -2,7 +2,7 @@ import Introduction from "./introduction"
 
 const Homepage = () => {
   return (
-    <div className="min-h-full flex justify-center">
+    <div className="min-h-full flex justify-center" style={{ height: '68vh' }}>
       <div className="flex flex-col justify-center items-center">
         <div className="text-center flex justify-between flex-col items-center">
           <Introduction />

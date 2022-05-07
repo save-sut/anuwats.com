@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import { useRouter } from "next/router"
+import myData from "../constants/myData"
 
 export default function Navbar() {
   const router = useRouter();
@@ -19,10 +20,10 @@ export default function Navbar() {
           <Link href="/">
             <a>
               <h1 className="font-semibold text-xl dark:text-gray-100">
-                Anwuat S.
+                {myData.name}
               </h1>
               <p className="text-base font-light text-gray-500 dark:text-gray-300">
-                Full-stack Developer
+                {myData.designation}
               </p>
             </a>
           </Link>

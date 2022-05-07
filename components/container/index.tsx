@@ -11,9 +11,10 @@ type Props = {
 
 export default function Container({ metaTitle, children }: Props) {
   const router = useRouter();
+  console.log("metaTitle:", metaTitle)
 
   const meta = {
-    title: metaTitle === "" ? "Anuwat Songchumrong - Web Developer" : `Anuwat S. | ${metaTitle}`,
+    title: (metaTitle === "" || metaTitle === undefined) ? "Anuwat Songchumrong - Full-stack Developer" : `Anuwat S. | ${metaTitle}`,
     description: `I've been developing websites for 3 years straight. Get in touch with me to know more.`,
     image: "/images/myself.jpeg",
     type: "website",
@@ -40,7 +41,7 @@ export default function Container({ metaTitle, children }: Props) {
       </Head>
       <main className="dark:bg-gray-800 w-full">
         <Navbar />
-        <div style={{ height: '68vh' }}>
+        <div>
           {children}
         </div>
         <Footer />
