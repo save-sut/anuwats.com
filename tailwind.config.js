@@ -7,21 +7,10 @@ module.exports = {
     },
   },
   darkMode: 'class', // or 'media' or 'class'
-  theme: {
-    typography: (theme) => ({}),
-    extend: {
-      typography: (theme) => ({
-        dark: {
-          css: {
-            color: 'white',
-          },
-        },
-      }),
-    },
-  },
+  theme: {},
   variants: {
     typography: ['dark'],
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
   mode: 'jit',
 }

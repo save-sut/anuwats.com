@@ -2,13 +2,12 @@ import myData from "../constants/myData"
 
 const Experiencepage = () => {
   return (
-    <section className="">
-      <div className=" mt-4">
+    <section>
+      <div className="mt-4">
         <div className="grid grid-cols-1 max-w-xl mx-auto py-10">
           {myData.experiences.map((exp, idx) => (
-            <>
+            <div key={idx}>
               <ExperienceCard
-                key={idx}
                 title={exp.title}
                 desc={exp.desc}
                 year={exp.year}
@@ -17,13 +16,13 @@ const Experiencepage = () => {
               />
               {idx === myData.experiences.length - 1 ? null : (
                 <div className="divider-container flex flex-col items-center -mt-2">
-                  <div className="w-4 h-4 bg-green-500 rounded-full relative z-10">
-                    <div className="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"></div>
+                  <div className={`w-4 h-4 bg-green-500 rounded-full relative z-10`}>
+                    <div className={`w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping`}></div>
                   </div>
                   <div className="w-1 h-24 bg-gray-200 dark:bg-gray-500 rounded-full -mt-2"></div>
                 </div>
               )}
-            </>
+            </div>
           ))}
         </div>
       </div>

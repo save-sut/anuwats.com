@@ -1,10 +1,21 @@
-const BlogsPage = () => {
+import BlogPreview from '../../components/blog/preview'
+import Empty from '../empty'
+
+const BlogsPage = ({ posts }: any) => {
+  if (posts.length <= 0) {
+    return (
+      <Empty>
+        <div className="ml-4 text-lg text-gray-500 uppercase">No posts yet</div>
+      </Empty>
+    )
+  }
+
   return (
-    <div className='min-h-full relative flex items-top justify-center dark:bg-gray-800 sm:items-center sm:pt-0' style={{ height: '68vh' }}>
-      <div className='flex justify-center align-items-center'>
-        <div className='flex items-center pt-8 sm:justify-start sm:pt-0'>
-          <div className="px-4 text-2xl text-gray-500 uppercase tracking-wider">Comming soon...</div>
-        </div>
+    <div style={{ minHeight: '68vh' }}>
+      <div className="grid grid-cols-1 max-w-xl mx-auto">
+        {posts.map((post: any) => (
+          <BlogPreview key={post.slug} slug={post.slug} title={post.title} publishedAt={post.publishedAt} summary={post.summary} />
+        ))}
       </div>
     </div>
   )
