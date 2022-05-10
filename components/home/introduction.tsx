@@ -7,11 +7,12 @@ const Introduction = () => {
       <div className="flex">
         <div style={{width: 200, height: 200, position: 'relative'}}>
           <Image
-            alt='Mountains'
+            alt='Me'
             src='/images/myself.jpeg'
             layout='fill'
             objectFit='cover'
             className='rounded-full'
+            priority
           />
         </div>
       </div>
