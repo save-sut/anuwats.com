@@ -7,7 +7,7 @@ const myData = {
       company: "Onionshack Company Limited, Bangkok.",
       year: "July 2021 - present",
       companyLink: "https://www.onionshack.com",
-      desc: "Create a DApp Blockchain website for Marketplace coupons and a website for a wide range of users",
+      desc: "Create a website in accordance with the user's objectives.",
     },
     {
       title: "Full-stack Developer",
