@@ -5,6 +5,7 @@ import { Page } from "../../components/page"
 import { Prose } from "../../components/prose";
 import { cx } from "../../lib/utils"
 import { MDXFrontMatter } from "../../lib/types"
+import { MDXComponents } from "./MDXComponents";
 
 interface PostProps {
   frontMatter: MDXFrontMatter
@@ -19,7 +20,7 @@ const BlogsPage: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) =>
       <div className="max-w-3xl m-auto px-4 mt-6 md:mt-0">
         <Page {...frontMatter}>
           <Prose>
-            <MDXRemote {...mdx} />
+            <MDXRemote {...mdx} components={MDXComponents} />
           </Prose>
           {previous || next ? (
             <nav
