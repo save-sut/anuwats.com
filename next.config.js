@@ -7,5 +7,6 @@ module.exports = withMDX({
   reactStrictMode: true,
   images: {
     domains: ['avatars0.githubusercontent.com', 'firebasestorage.googleapis.com']
-  }
+  },
+  output: 'standalone'
 })
