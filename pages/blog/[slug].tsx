@@ -6,6 +6,7 @@ import { getAllMdx } from "../../lib/mdx"
 import { MDXFrontMatter } from "../../lib/types"
 import Container from '../../components/container'
 import PostPage from '../../components/blog/post'
+import TOC from "../../components/toc";
 import remarkSlug from 'remark-slug'
 import remarkAutolinkHeadings from 'remark-autolink-headings'
 import rehypeRaw from 'rehype-raw'
@@ -27,6 +28,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) => {
     <main className="dark:bg-gray-800 w-full">
       <Container metaTitle='Post'>
         <PostPage frontMatter={frontMatter} mdx={mdx} previous={previous} next={next} />
+        <TOC postSlug={frontMatter.slug} />
       </Container>
     </main>
   )
