@@ -7,7 +7,7 @@ const TOC = ({ postSlug }: { postSlug: string }) => {
 
   useEffect(() => {
     const content: HTMLElement | null = document.getElementById('post-body')
-    const headingElements: any[] = Array.from(content.querySelectorAll('h1,h2,h3,h4'))
+    const headingElements: any[] = content ? Array.from(content.querySelectorAll('h1,h2,h3,h4')) : []
     setHeadings(headingElements);
   }, [postSlug])
 
