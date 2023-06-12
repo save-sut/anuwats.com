@@ -5,7 +5,7 @@ const myData = {
     {
       title: "Full-stack Developer",
       company: "Onionshack Company Limited, Bangkok.",
-      year: "July 2021 - present",
+      year: "July 2021 - January 2023",
       companyLink: "https://www.onionshack.com",
       desc: "Create a website in accordance with the user's objectives.",
     },
