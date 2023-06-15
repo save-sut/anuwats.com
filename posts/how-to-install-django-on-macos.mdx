@@ -1,0 +1,83 @@
+---
+title: 'การติดตั้ง Django บน MacOS'
+date: '2023-06-16'
+summary: 'สาธิตการติดตั้ง Django บน MacOS แบบเป็นขั้นเป็นตอน'
+---
+
+![Django](https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c)
+
+# ขั้นตอนการติดตั้งแบบย่อ
+- 1.ติดตั้ง Python
+- 2.ติดตั้ง pip
+- 3.ติดตั้ง Virtual Environment (venv) สำหรับแยกแต่ละโปรเจค Django ออกจากกัน
+- 4.ติดตั้งเฟรมเวิร์ค Django ด้วย pip
+- 5.สร้างโปรเจค Django
+<br />
+<br />
+
+# ขั้นตอนที่ 1: ติดตั้ง Python
+```
+brew install python3
+```
+### หลังติดตั้งสำเร็จ ให้ทำการตรวจสอบเวอร์ชั่น
+```
+python3
+```
+### จะได้ผลลัพธ์ดังนี้
+![Python3 Version](/images/how-to-install-django-on-macos-img1.png)
+### เมื่อต้องการออกจาก python console ให้พิมพ์
+```
+exit()
+```
+
+# ขั้นตอนที่ 2: ทำการสร้าง alias สำหรับ pip ให้ชี้ไปที่ pip3
+```
+alias pip=pip3
+```
+
+# ขั้นตอนที่ 3: ติดตั้ง Virtual Environment (venv)
+```
+pip install virtualenv
+```
+### หลังจากติดตั้ง venv เรียบร้อยแล้ว ให้ทำการสร้าง directory สำหรับเก็บ venv ในตัวอย่างจะสร้าง directory ชื่อว่า krapook
+```
+virtualenv krapook
+```
+### เข้าไปที่ directory ชื่อว่า krapook
+```
+cd krapook
+```
+### ทำการ activate venv
+```
+source bin/activate
+```
+### จะได้ผลลัพธ์ดังนี้
+![Activate VENV](/images/how-to-install-django-on-macos-img2.png)
+
+# ขั้นตอนที่ 4: ติดตั้งเฟรมเวิร์ค Django ด้วย pip
+### บนเว็บไซต์ django official เวอร์ชั่นล่าสุด (ณ วันที่ 16 มิ.ย. 66) คือ 4.2.2
+```
+pip install Django==4.2.2
+```
+### หลังจากติดตั้ง django เสร็จแล้วให้ทำการเช็คเวอร์ชั่นอีกครั้งด้วย
+```
+python -m django --version
+```
+
+# ขั้นตอนที่ 5: สร้างโปรเจค Django ชื่อออมสิน
+```
+django-admin startproject aomsin
+```
+### เข้าไปที่โปรเจคออมสิน
+```
+cd aomsin
+```
+### ทดสอบรันโปรเจคออมสิน
+```
+python manage.py runserver
+```
+### จะได้ผลลัพธ์ดังนี้
+![Terminal Result](/images/how-to-install-django-on-macos-img3.png)
+### เมื่อเปิด browser และเข้าไปที่ URL: [http://127.0.0.1:8000](http://127.0.0.1:8000/) จะได้ผลลัพธ์ดังนี้
+![Terminal Result](/images/how-to-install-django-on-macos-img4.png)
+### จบขั้นตอนการติดตั้ง Django เพียงเท่านี้
