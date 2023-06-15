@@ -6,7 +6,7 @@ module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   reactStrictMode: true,
   images: {
-    domains: ['avatars0.githubusercontent.com', 'firebasestorage.googleapis.com']
+    domains: ['avatars0.githubusercontent.com', 'firebasestorage.googleapis.com', 'images.unsplash.com']
   },
   output: 'standalone'
 })
